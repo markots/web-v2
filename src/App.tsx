@@ -1,21 +1,52 @@
 import React from 'react';
-import Home from './components/Home';
-import Header from './components/Header';
-import Vision from './components/Vision';
-import Features from './components/Features';
-import EarlyAccess from './components/EarlyAccess';
-import Footer from './components/Footer';
+
+
+
+import Features from './Screen/Features';
+import FeedSlider2 from './Screen/Features/slide2';
+import FeedSlider3 from './Screen/Features/slide3';
+import FeedSlider4 from './Screen/Features/slide4';
+import Feature5 from './Screen/Features/slide5';
+import HorizontalScrollContainer from './component/Features/horin';
+
+
+
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Home/>
-      <Vision/>
-      <Features/>
-      <EarlyAccess/>
-      <Footer/>
+
+
+    <div className='flew-grow-1'>
+
+
+     
+
+
+        <Features />
+        <FeedSlider2 />
+        <FeedSlider3 />
+        {/* <FeedSlider4 /> */}
+        <Feature5/>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
+
+
+
+
   );
 }
 
