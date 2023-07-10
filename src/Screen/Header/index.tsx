@@ -1,17 +1,13 @@
-import React from 'react'
+import React from "react";
 import { BsTwitter, BsGithub } from "react-icons/bs";
-import { images } from '../../constants/images';
+import { images } from "../../constants/images";
 
 function Header() {
   return (
-    <div
-      className="w-full px-6 py-4 z-10 absolute flex justify-between"
-    >
+    <div className="w-full px-6 py-4 z-10 absolute flex justify-between pb-20">
       <div className="flex gap-2 items-center">
         <img className="w-12 h-12" src={images.logo} alt="logo" />
-        <span
-          className="font-[Urbanist] text-[42px] font-bold text-white"
-        >
+        <span className="lg:hidden lg:text-[42px] text-[20px] font-bold text-white">
           TowneSquare
         </span>
       </div>
@@ -36,14 +32,12 @@ function Header() {
             }}
           />
         </a>
-        <button 
-          className="px-6 py-2 text-[18px] text-black font-semibold bg-white rounded-full"
-        >
+        <button className="px-6 py-2 text-[18px] lg:block hidden text-black font-semibold bg-white rounded-full">
           Get early access
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

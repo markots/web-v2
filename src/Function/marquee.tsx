@@ -1,16 +1,16 @@
-import React, { CSSProperties } from 'react';
-import Svgtext1 from '../component/Features/text';
+import React, { CSSProperties } from "react";
+import Svgtext1 from "../component/Features/text";
 
 const MarqueeText = () => {
   const marqueeContainerStyle: CSSProperties = {
-    width: '100%',
-    overflow: 'hidden',
+    width: "100%",
+    overflow: "hidden",
   };
 
   const marqueeContentStyle: CSSProperties = {
-    display: 'inline-block',
-    whiteSpace: 'nowrap',
-    animation: 'marquee-animation 28s linear infinite',
+    display: "inline-block",
+    whiteSpace: "nowrap",
+    animation: "marquee-animation 30s linear infinite",
   };
 
   const keyframesStyle = `
