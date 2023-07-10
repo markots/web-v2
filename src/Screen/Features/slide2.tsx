@@ -1,11 +1,30 @@
-import React from 'react'
+
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
 import Feed2 from '../../component/Features/Feed2'
 import SlideText from '../../component/Features/animation'
+import React, { useState, useEffect } from 'react';
 import AnimateOnScroll from '../../component/Features/animation'
+import SvgMFeed2 from '../../component/Features/mobile/MFeed2';
 
 function FeedSlider2() {
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Logic to determine mobile view
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobileView(windowWidth < 768); // Set breakpoint according to your design
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div
       className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center"
@@ -21,7 +40,7 @@ function FeedSlider2() {
 
       
           <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-            <Feed2 />
+              {isMobileView ? <SvgMFeed2/> : <Feed2/>}
           </div>
 
 

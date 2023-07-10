@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
 import ProfileFeed from '../../component/Features/Peofile'
 import AnimateOnScroll from '../../component/Features/animation'
+import SVGProfile from '../../component/Features/mobile/MProfile';
 
 function FeedSlider3() {
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Logic to determine mobile view
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobileView(windowWidth < 768); // Set breakpoint according to your design
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div
       className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center"
@@ -21,7 +39,7 @@ function FeedSlider3() {
     
 
           <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-            <ProfileFeed />
+          {isMobileView ? <SVGProfile/> : <ProfileFeed/>}
           </div>
 
 

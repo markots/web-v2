@@ -1,13 +1,31 @@
 import AnimateOnScroll from "../../component/Features/animation";
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
 import ProfileFeed from '../../component/Features/Peofile'
 import DMfeedSvg from "../../component/Features/DmFeed";
+import SVGFeeed4 from "../../component/Features/mobile/Mfeed4";
 
 
 
 function Feature5() {
+    const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Logic to determine mobile view
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobileView(windowWidth < 768); // Set breakpoint according to your design
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
     return (
 
 
@@ -30,7 +48,7 @@ function Feature5() {
 
 
                     <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-                        <DMfeedSvg />
+                    {isMobileView ? <SVGFeeed4/> : <DMfeedSvg/>}
                     </div>
 
 

@@ -1,14 +1,31 @@
-import React from 'react';
-import SvgComponent from '../../component/Features/feed';
+import React, { useState, useEffect } from 'react';
 import { images } from '../../constants/images';
 import CustomText from '../../component/Features/CustomText';
+import Feed2 from '../../component/Features/Feed2';
 import FeedMain from '../../component/Features/Feedmain';
-import AnimateOnScroll from '../../component/Features/animation';
+import SvgMobiFeed from '../../component/Features/mobile/MFeedMain';
 
 function Features() {
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Logic to determine mobile view
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobileView(windowWidth < 768); // Set breakpoint according to your design
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div
-      className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center"
+      className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full"
       style={{
         background: `url(${images.back})`,
         backgroundSize: 'cover',
@@ -18,25 +35,16 @@ function Features() {
         width: 'auto',
       }}
     >
-      
+      <div className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center">
+        <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
+          {isMobileView ? <SvgMobiFeed /> : <FeedMain />}
+        </div>
 
-          <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-
-            <FeedMain />
-          </div>
-
-
-          <CustomText
-            title=" Contextual social feed "
-            content='TowneSquare feed enables context-specific features for each post to maximize utility for viewers. Users can seamlessly transition between finance and social experience in one user-friendly feed.'
-          />
-
-
-
-       
-
-
-
+        <CustomText
+          title="Contextual social feed"
+          content="TowneSquare feed enables context-specific features for each post to maximize utility for viewers. Users can seamlessly transition between finance and social experience in one user-friendly feed."
+        />
+      </div>
     </div>
   );
 }

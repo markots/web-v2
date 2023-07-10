@@ -1,6 +1,6 @@
 const webImages = {
-    // logo: require("../../public/assets/img/logo.png"),
-    
-    back: require("../assets/images/backk.png")
+    logo: require("../assets/images/logo.png"),
+    back: require("../assets/images/backk.png"),
+    background: require("../assets/images/featurebg.png")
 };
 export const images = webImages;
