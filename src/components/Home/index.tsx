@@ -3,12 +3,14 @@ import { images } from '../../constants/images';
 import { BsTwitter } from 'react-icons/bs';
 
 const Home = () => {
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState({ left: 0, top: 0 });
 
   const onMouseMove = (e: any) => {
-    const percent = (window.innerWidth/2 - e.clientX)/(window.innerWidth/2);
-    const maxOffset = 10;
-    setOffset(maxOffset * percent);
+    const percentX = (window.innerWidth / 2 - e.clientX) / (window.innerWidth / 2);
+    const percentY = (window.innerHeight / 2 - e.clientY) / (window.innerHeight / 2);
+
+    const maxOffset = 30;
+    setOffset({ left: maxOffset * percentX, top: maxOffset * percentY });
   }
 
   return (
@@ -19,7 +21,7 @@ const Home = () => {
       <img
         src={images.homeBackground}
         alt="background"
-        className="hidden md:block h-full"
+        className="hidden md:block md:h-full lg:w-full"
       />
       <img
         src={images.homeBackgroundMobile}
@@ -27,8 +29,8 @@ const Home = () => {
         className="md:hidden w-full h-auto"
       />
       <div className="absolute inset-0 pt-24 lg:pt-32">
-        <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row md:gap-8 lg:gap-32 items-center justify-center px-4 lg:px-24">
-          <div className="flex flex-col gap-6">
+        <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row md:gap-8 lg:gap-32 items-center justify-center px-4">
+          <div className="flex flex-col gap-6 max-w-[800px]">
             <span className="text-[40px] md:text-[48px] lg:text-[56px] font-bold">
               <span className="text-[#00EEFD]">The Web3 ”everything” app</span>
               <br />you have been waiting for
@@ -74,10 +76,11 @@ const Home = () => {
               src={images.glass} alt="glass"
               className="absolute -right-2 -top-2 ease-in"
               style={{
-                left: offset,
+                left: offset.left,
+                top: offset.top
               }}
             />
-            <img src={images.feed} alt="feed" className="z-10"/>
+            <img src={images.feed} alt="feed" className="z-10" />
           </div>
         </div>
       </div>
