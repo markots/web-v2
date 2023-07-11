@@ -8,6 +8,25 @@ import MarqueeText2 from "../../Function/marque2";
 import SvgFeature6 from "../../component/Features/Feature6";
 
 function FeedSlider7() {
+
+    const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Logic to determine mobile view
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobileView(windowWidth < 768); 
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+    
     return (
         <div
             className="flex flex-col md:gap-12 flex-grow-1 justify-center bg-black relative items-center mt-30"

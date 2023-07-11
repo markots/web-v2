@@ -12,7 +12,7 @@ function FeedSlider3() {
     // Logic to determine mobile view
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      setIsMobileView(windowWidth < 768); // Set breakpoint according to your design
+      setIsMobileView(windowWidth < 768); 
     };
 
     window.addEventListener('resize', handleResize);

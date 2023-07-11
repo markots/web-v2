@@ -1,5 +1,5 @@
 import { images } from "../../constants/images";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SVGFeat from "../../component/Features/connect2";
 import Svgtext1 from "../../component/Features/text";
 import Svgtext2 from "../../component/Features/text2";
@@ -8,6 +8,22 @@ import MarqueeText2 from "../../Function/marque2";
 import Svg7Component from "../../component/Features/feature7";
 
 function FeedSlider5() {
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Logic to determine mobile view
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobileView(windowWidth < 768); 
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div
       className="flex flex-col md:gap-12 flex-grow-1 justify-center bg-black relative items-center "
@@ -24,7 +40,8 @@ function FeedSlider5() {
         <div className="h-40"></div>
         <MarqueeText />
         <div className="flex z-1 flex-col items-center mb-20 -mt-40">
-          <Svg7Component />
+          {isMobileView ? <img
+          src={images.feature7}/>  : <img src= {images.mfeature7}/> }
         </div>
 
         <div className=" items-center max-w-2xl text-center text-base sm:text-xl md:text-2xl lg:text-2xl font-Outfit font-normal leading-24 sm:leading-30 md:leading-34 text-white ">

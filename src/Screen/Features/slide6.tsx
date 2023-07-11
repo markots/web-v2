@@ -7,6 +7,22 @@ import MarqueeText from "../../Function/marquee";
 import MarqueeText2 from "../../Function/marque2";
 
 function FeedSlider6() {
+  const [isMobileView, setIsMobileView] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Logic to determine mobile view
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setIsMobileView(windowWidth < 768); 
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <div
       className="flex flex-col md:gap-12 flex-grow-1 justify-center bg-black relative items-center mt-30"
@@ -24,7 +40,9 @@ function FeedSlider6() {
         <MarqueeText />
 
         <div className="z-10 -mt-32 flex flex-col items-center mb-20 ">
-          <SVGFeat />
+         {isMobileView ? <img
+         src= {images.feature5}/>   :  <img
+         src={images.mfeature5}/> }
         </div>
 
         <div className="items-center max-w-2xl  text-center text-base sm:text-xl md:text-2xl lg:text-2xl font-Outfit font-normal leading-24 sm:leading-30 md:leading-34 text-white ">
