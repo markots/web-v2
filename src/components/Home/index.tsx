@@ -6,7 +6,6 @@ const Home = () => {
   const [offset, setOffset] = useState(0);
 
   const onMouseMove = (e: any) => {
-    console.log(e.clientX, window.innerWidth)
     const percent = (window.innerWidth/2 - e.clientX)/(window.innerWidth/2);
     const maxOffset = 10;
     setOffset(maxOffset * percent);
@@ -14,13 +13,18 @@ const Home = () => {
 
   return (
     <div
-      className="relative overflow-hidden"
+      className="relative overflow-hidden h-[1500px] md:h-[800px]"
       onMouseMove={(e) => onMouseMove(e)}
     >
       <img
         src={images.homeBackground}
         alt="background"
-        className="h-auto object-cover max-w-[none] lg:h-screen"
+        className="hidden md:block h-full"
+      />
+      <img
+        src={images.homeBackgroundMobile}
+        alt="background"
+        className="md:hidden w-full h-auto"
       />
       <div className="absolute inset-0 pt-24 lg:pt-32">
         <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row md:gap-8 lg:gap-32 items-center justify-center px-4 lg:px-24">
