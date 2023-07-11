@@ -44,7 +44,9 @@ function FeedSlider7() {
                 <MarqueeText />
 
                 <div className="z-10 flex flex-col items-center mb-20 -mt-40 ">
-                    <SvgFeature6 />
+                    {isMobileView ? <img
+                    src= {images.feature6}/> : <img
+                    src={images.mfeature6} />}
                 </div>
 
                 <div className="items-center max-w-2xl text-center text-base sm:text-xl md:text-2xl lg:text-2xl font-Outfit font-normal leading-24 sm:leading-30 md:leading-34 text-white ">
