@@ -1,40 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { images } from '../../constants/images';
 import { BsTwitter } from 'react-icons/bs';
 
 const Home = () => {
+  const [offset, setOffset] = useState(0);
+
+  const onMouseMove = (e: any) => {
+    console.log(e.clientX, window.innerWidth)
+    const percent = (window.innerWidth/2 - e.clientX)/(window.innerWidth/2);
+    const maxOffset = 10;
+    setOffset(maxOffset * percent);
+  }
+
   return (
     <div
-      className="relative"
+      className="relative overflow-hidden"
+      onMouseMove={(e) => onMouseMove(e)}
     >
-      <img src={images.homeBackground} alt="background" />
-      <div className="absolute inset-0 pt-32">
-        <div className="flex gap-32 items-center justify-center px-24">
+      <img
+        src={images.homeBackground}
+        alt="background"
+        className="h-auto object-cover max-w-[none] lg:h-screen"
+      />
+      <div className="absolute inset-0 pt-24 lg:pt-32">
+        <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row md:gap-8 lg:gap-32 items-center justify-center px-4 lg:px-24">
           <div className="flex flex-col gap-6">
-            <span className="text-[56px] font-bold">
+            <span className="text-[40px] md:text-[48px] lg:text-[56px] font-bold">
               <span className="text-[#00EEFD]">The Web3 ”everything” app</span>
               <br />you have been waiting for
             </span>
-            <span className="text-[32px] font-semibold">
+            <span className="text-[24px] lg:text-[32px] font-semibold">
               By “everything”, we mean social, payments, community space, discover your favorite content & digital items – all in one place.
             </span>
             <div className="self-start">
-              <div className="p-6 flex text-xl font-semibold border border-1 border-[#666] rounded-xl bg-[#00000033]">
+              <div className="p-4 lg:p-6 flex flex-col lg:flex-row gap-4 lg:gap-0 text-xl font-semibold border border-1 border-[#666] rounded-xl bg-[#00000033]">
                 Coming soon on &nbsp;
-                <img src={images.androidLogo} className="w-6" alt="logo" />
-                &nbsp;Android and&nbsp;
-                <img src={images.appleLogo} className="w-6" alt="logo" />
-                &nbsp;iOS
+                <div className="flex">
+                  <img src={images.androidLogo} className="w-6" alt="logo" />
+                  &nbsp;Android and&nbsp;
+                  <img src={images.appleLogo} className="w-6" alt="logo" />
+                  &nbsp;iOS
+                </div>
               </div>
             </div>
             <div className="flex gap-6">
               <button
-                className="px-6 h-12 text-[18px] text-black font-semibold bg-white rounded-full"
+                className="px-2 md:px-4 lg:px-6 h-12 text-[18px] text-black font-semibold bg-white rounded-full"
               >
                 Get early access
               </button>
               <button
-                className="px-6 h-12 flex items-center text-[18px] text-white font-semibold border-2 border-white rounded-full"
+                className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold border-2 border-white rounded-full"
               >
                 Follow us on
                 <BsTwitter
@@ -45,12 +61,19 @@ const Home = () => {
                     paddingRight: "8px",
                   }}
                 />
-                Twitter
+                <span className="hidden lg:block">Twitter</span>
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-center min-w-[300px]">
-            <img src={images.feed} alt="feed"/>
+          <div className="flex items-center justify-center min-w-[300px] relative">
+            <img
+              src={images.glass} alt="glass"
+              className="absolute -right-2 -top-2 ease-in"
+              style={{
+                left: offset,
+              }}
+            />
+            <img src={images.feed} alt="feed" className="z-10"/>
           </div>
         </div>
       </div>

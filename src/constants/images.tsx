@@ -4,5 +4,6 @@ const webImages = {
     androidLogo: require("../assets/images/android_logo.png"),
     appleLogo: require("../assets/images/apple_logo.png"),
     feed: require("../assets/images/feed.png"),
+    glass: require("../assets/images/glass.png"),
 };
 export const images = webImages;
