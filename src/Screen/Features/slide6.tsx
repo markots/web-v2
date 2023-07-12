@@ -44,7 +44,10 @@ function FeedSlider6() {
 
         </AnimateText>
 
-        <AnimationOnScroll duration={2} animateIn="animate__fadeInRightBig" animateOut="animate__fadeInLeftBig">
+        <AnimationOnScroll 
+        duration={2} 
+        animateIn="animate__fadeInRightBig" 
+        animateOut="animate__fadeOutLeftBig">
 
         <div className="z-10 -mt-32 flex flex-col items-center mb-20 ">
           {isMobileView ? <img
