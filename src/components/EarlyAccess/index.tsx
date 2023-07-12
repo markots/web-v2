@@ -49,14 +49,14 @@ function EarlyAccess() {
           <img src="/images/aptos.svg" alt="aptos_image"/>
         </div>
         <div className='lg:flex w-full pb-64'>
-          <Marquee autoFill={true}  className='text-center text-white font-Outfit font-bold text-7xl pt-24 z-10 px-24'>
-            Let's connect
+          <Marquee autoFill={true}>
+            <p className='text-center text-white font-Outfit font-bold text-7xl pt-24 z-10 px-24'>Let's connect</p>
           </Marquee>
         </div>
         
         
         <div className='relative'>
-          <img className='w-full absolute mt-[-200px]' src="/images/line.svg" alt="line_image"/>
+          <img className='w-full absolute lg:mt-[-220px] md:mt-[-170px]' src="/images/line.svg" alt="line_image"/>
           <img className='w-full' src="/images/bottom.svg" alt="bottom_image"/>
           <div className="absolute inset-0 flex items-center justify-center w-full bottom-[70%]">
             <div className="bg-gray-500 bg-opacity-40 backdrop-blur-2xl py-24 border border-white w-8/12 rounded-md">
@@ -99,7 +99,7 @@ function EarlyAccess() {
               </div>
             </div>
           </div>
-          <div className='absolute text-center w-full bottom-[10%]'>
+          <div className='absolute text-center w-full bottom-[12%]'>
             <p className="text-[20px] text-center text-white font-Outfit font-bold">Find out more about Townesquare</p>
             <div className='flex justify-center pt-6 space-x-8'>
               <a href='https://twitter.com/TowneSquarexyz' target="_blank" rel="noreferrer">
