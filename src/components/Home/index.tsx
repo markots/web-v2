@@ -15,30 +15,61 @@ const Home = () => {
 
   return (
     <div
-      className="relative overflow-hidden h-[1500px] md:h-[800px]"
+      className="relative bg-black"
       onMouseMove={(e) => onMouseMove(e)}
     >
-      <img
-        src={images.homeBackground}
-        alt="background"
-        className="hidden md:block md:h-full lg:w-full"
-      />
-      <img
-        src={images.homeBackgroundMobile}
-        alt="background"
-        className="md:hidden w-full h-auto"
-      />
-      <div className="absolute inset-0 pt-24 lg:pt-32">
-        <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row md:gap-8 lg:gap-32 items-center justify-center px-4">
-          <div className="flex flex-col gap-6 max-w-[800px]">
+      <div className="absolute z-0 w-full  hidden lg:block">
+        <img
+          src={images.left_web}
+          alt="background"
+          className="top-0 left-0"
+        />
+        <img
+          src={images.right_web}
+          alt="background"
+          className="absolute top-0 right-0"
+        />
+        <img
+          src={images.right1_web}
+          alt="background"
+          className="absolute top-0 right-0"
+        />
+      </div>
+      <div className="absolute z-0 w-full  hidden md:block lg:hidden">
+        <img
+          src={images.left_tablet}
+          alt="background"
+          className="top-0 left-0"
+        />
+        <img
+          src={images.right_tablet}
+          alt="background"
+          className="absolute top-[40vh] right-0"
+        />
+      </div>
+      <div className="absolute z-0 w-full  block md:hidden">
+        <img
+          src={images.left_mobile}
+          alt="background"
+          className="top-0 left-0"
+        />
+        <img
+          src={images.right_mobile}
+          alt="background"
+          className="absolute top-[20vh] right-0"
+        />
+      </div>
+      <div className="pt-24 lg:pt-32 pb-8 lg:pb-32 relative z-10">
+        <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 lg:gap-32 items-center justify-center px-4">
+          <div className="flex flex-col gap-6 max-w-[800px] md:pr-10 lg:pr-0">
             <span className="text-[40px] md:text-[48px] lg:text-[56px] font-bold">
               <span className="text-[#00EEFD]">The Web3 ”everything” app</span>
               <br />you have been waiting for
             </span>
-            <span className="text-[24px] lg:text-[32px] font-semibold">
+            <span className="text-[24px] lg:text-[32px] font-semibold ">
               By “everything”, we mean social, payments, community space, discover your favorite content & digital items – all in one place.
             </span>
-            <div className="self-start">
+            <div className="self-start md:self-auto lg:self-start">
               <div className="p-4 lg:p-6 flex flex-col lg:flex-row gap-4 lg:gap-0 text-xl font-semibold border border-1 border-[#666] rounded-xl bg-[#00000033]">
                 Coming soon on &nbsp;
                 <div className="flex">
@@ -51,12 +82,12 @@ const Home = () => {
             </div>
             <div className="flex gap-6">
               <button
-                className="px-2 md:px-4 lg:px-6 h-12 text-[18px] text-black font-semibold bg-white rounded-full"
+                className="px-2 md:px-4 lg:px-6 h-12 text-[18px] text-black font-semibold bg-white rounded-full whitespace-nowrap"
               >
                 Get early access
               </button>
               <button
-                className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold border-2 border-white rounded-full"
+                className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold border-2 border-white rounded-full whitespace-nowrap"
               >
                 Follow us on
                 <BsTwitter
@@ -84,7 +115,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
     </div>
   )
 }
