@@ -4,6 +4,7 @@ import CustomText from '../../component/Features/CustomText';
 import Feed2 from '../../component/Features/Feed2';
 import FeedMain from '../../component/Features/Feedmain';
 import SvgMobiFeed from '../../component/Features/mobile/MFeedMain';
+import AnimateScroll from '../../component/Features/animation';
 
 function Features() {
   const [isMobileView, setIsMobileView] = useState<boolean>(false);
@@ -35,6 +36,8 @@ function Features() {
         width: 'auto',
       }}
     >
+
+      <AnimateScroll> 
       <div className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center">
         <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
           {isMobileView ? <SvgMobiFeed /> : <FeedMain />}
@@ -45,6 +48,8 @@ function Features() {
           content="TowneSquare feed enables context-specific features for each post to maximize utility for viewers. Users can seamlessly transition between finance and social experience in one user-friendly feed."
         />
       </div>
+
+      </AnimateScroll>
     </div>
   );
 }

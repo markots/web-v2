@@ -6,11 +6,17 @@ import Svgtext2 from "../../component/Features/text2";
 import MarqueeText from "../../Function/marquee";
 import MarqueeText2 from "../../Function/marque2";
 import Svg7Component from "../../component/Features/feature7";
+import ScrollText from "../../Function/slidetext";
+import AnimateOnScroll from "../../component/Features/animation";
 import AnimateText from "../../component/Features/animateText";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import 'animate.css'
 
 
-function FeedSlider5() {
+function FeedSlidertest() {
+
+
+
   const [isMobileView, setIsMobileView] = useState<boolean>(false);
 
   useEffect(() => {
@@ -40,34 +46,39 @@ function FeedSlider5() {
       }}
     >
       <div className="flex flex-col md:flex-col  flex-grow-1 justify-center  relative w-full items-center ">
-        <div className="h-40"></div>
-        <AnimateText>
-          <div className="  pr-6 mt-16">  <Svgtext1 /> </div>
 
-        </AnimateText>
+      
 
 
 
+      <AnimateText>
+        <div className=" mb-16 pr-96">  <Svgtext1/> </div>
+
+      </AnimateText>
+
+<AnimationOnScroll duration={2} animateIn="animate__fadeInRightBig" animateOut="animate__fadeInLeftBig">
+ 
 
 
 
-        <AnimationOnScroll duration={2} animateIn="animate__fadeInRightBig" animateOut="animate__fadeInLeftBig">
-          <div className="flex z-1 flex-col items-center mb-20 -mt-40">
-            {isMobileView ? <img
-              src={images.feature7} /> : <img src={images.mfeature7} />}
-          </div>
 
-          <div className=" items-center max-w-2xl text-center text-base sm:text-xl md:text-2xl lg:text-2xl font-Outfit font-normal leading-24 sm:leading-30 md:leading-34 text-white ">
-            <p className="z-1 -mb-40 ">
-              Experience boundless possibilities with your on-chain verifiable
-              identity – gain exclusive event access, exciting airdrop rewards,
-              and in-app perks!
-            </p>
-          </div>
+
+
+        <div className="flex z-1 flex-col items-center mb-20 -mt-40">
+          {isMobileView ? <img
+            src={images.feature7} /> : <img src={images.mfeature7} />}
+        </div>
+
+        <div className=" items-center max-w-2xl text-center text-base sm:text-xl md:text-2xl lg:text-2xl font-Outfit font-normal leading-24 sm:leading-30 md:leading-34 text-white ">
+          <p className="z-1 -mb-40 ">
+            Experience boundless possibilities with your on-chain verifiable
+            identity – gain exclusive event access, exciting airdrop rewards,
+            and in-app perks!
+          </p>
+        </div>
         </AnimationOnScroll>
-
-
       </div>
+    
 
       <AnimateText>
         <div className=" mb-16">  <Svgtext2 /> </div>
@@ -77,4 +88,4 @@ function FeedSlider5() {
   );
 }
 
-export default FeedSlider5;
+export default FeedSlidertest;

@@ -10,6 +10,7 @@ import FeedSlider6 from "./Screen/Features/slide6";
 import FeedSlider7 from "./Screen/Features/slide7";
 import FeedSlider5 from "./Screen/Features/slide8";
 import Header from "./Screen/Header";
+import FeedSlidertest from "./Screen/Features/slidetest";
 
 function App() {
   return (
@@ -18,11 +19,13 @@ function App() {
       <Features />
       <FeedSlider2 />
       <FeedSlider3 />
-
+     
       <Feature5 />
       <FeedSlider6 />
       <FeedSlider7 />
       <FeedSlider5 />
+       <FeedSlidertest/>
+     
     </div>
   );
 }

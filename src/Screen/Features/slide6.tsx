@@ -5,6 +5,8 @@ import Svgtext1 from "../../component/Features/text";
 import Svgtext2 from "../../component/Features/text2";
 import MarqueeText from "../../Function/marquee";
 import MarqueeText2 from "../../Function/marque2";
+import AnimateText from "../../component/Features/animateText";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function FeedSlider6() {
   const [isMobileView, setIsMobileView] = useState<boolean>(false);
@@ -13,7 +15,7 @@ function FeedSlider6() {
     // Logic to determine mobile view
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      setIsMobileView(windowWidth < 768); 
+      setIsMobileView(windowWidth < 768);
     };
 
     window.addEventListener('resize', handleResize);
@@ -37,12 +39,17 @@ function FeedSlider6() {
     >
       <div className=" flex flex-col md:flex-col  flex-grow-1 justify-center  relative w-full items-center">
         <div className="h-40"></div>
-        <MarqueeText />
+        <AnimateText>
+          <div className=" pr-96 mt-16">  <Svgtext1 /> </div>
+
+        </AnimateText>
+
+        <AnimationOnScroll duration={2} animateIn="animate__fadeInRightBig" animateOut="animate__fadeInLeftBig">
 
         <div className="z-10 -mt-32 flex flex-col items-center mb-20 ">
-         {isMobileView ? <img
-         src= {images.feature5}/>   :  <img
-         src={images.mfeature5}/> }
+          {isMobileView ? <img
+            src={images.feature5} /> : <img
+            src={images.mfeature5} />}
         </div>
 
         <div className="items-center max-w-2xl  text-center text-base sm:text-xl md:text-2xl lg:text-2xl font-Outfit font-normal leading-24 sm:leading-30 md:leading-34 text-white ">
@@ -51,7 +58,14 @@ function FeedSlider6() {
             anywhere you want
           </p>
         </div>
-        <MarqueeText2 />
+        </AnimationOnScroll>
+
+        <AnimateText>
+        <div className=" mb-16 pl-80">  <Svgtext2 /> </div>
+
+
+
+      </AnimateText>
       </div>
     </div>
   );

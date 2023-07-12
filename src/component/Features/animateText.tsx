@@ -45,7 +45,7 @@ const useElementOnScreen = (
     return [containerRef, isVisible];
 };
 
-const AnimateScroll = ({
+const AnimateText = ({
     children,
     reappear,
     threshold = 0.5,
@@ -59,8 +59,8 @@ const AnimateScroll = ({
         <div
             ref={containerRef}
             className={`transition duration-1000 ${isVisible
-                    ? 'opacity-100 blur-none translate-x-0'
-                    : 'opacity-0 blur-lg translate-x-20'
+                    ? 'opacity-100 blur-none translate-x-0 pr-72'
+                    : 'opacity-0 blur-lg translate-x-20 pl-0'
                 } motion-reduce:transition-none motion-reduce:hover:transform-none`}
         >
             {children}
@@ -68,4 +68,4 @@ const AnimateScroll = ({
     );
 };
 
-export default AnimateScroll;
+export default AnimateText;

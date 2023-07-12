@@ -1,10 +1,11 @@
-import AnimateOnScroll from "../../component/Features/animation";
+
 import React, { useState, useEffect } from 'react';
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
 import ProfileFeed from '../../component/Features/Peofile'
 import DMfeedSvg from "../../component/Features/DmFeed";
 import SVGFeeed4 from "../../component/Features/mobile/Mfeed4";
+import AnimateScroll from '../../component/Features/animation';
 
 
 
@@ -42,7 +43,14 @@ function Feature5() {
                 width: 'auto',
             }}
         >
-            <AnimateOnScroll>
+            
+
+            <AnimateScroll>
+
+
+
+
+           
 
                 <div className=" flex flex-row">
 
@@ -58,12 +66,8 @@ function Feature5() {
                     />
 
 
-
                 </div>
-
-
-
-            </AnimateOnScroll>
+ </AnimateScroll>
 
 
 
