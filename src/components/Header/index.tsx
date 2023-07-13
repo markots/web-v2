@@ -5,7 +5,7 @@ import { images } from '../../constants/images';
 function Header() {
   return (
     <div
-      className="w-full px-6 py-4 z-10 absolute flex justify-between"
+      className="w-full px-6 py-4 z-20 absolute flex justify-between"
     >
       <div className="flex gap-2 items-center">
         <img className="w-6 md:w-8 lg:w-12 h-6 md:h-8 lg:h-12" src={images.logo} alt="logo" />
@@ -37,7 +37,7 @@ function Header() {
           </a>
         </div>
         <button
-          className="hidden md:block px-6 py-2 text-[18px] text-black font-semibold bg-white rounded-full"
+          className="hidden md:block px-6 py-2 text-[18px] text-black font-semibold bg-white hover:bg-[#CCCCCC] active:bg-[#AAAAAA] rounded-full cursor-pointer"
         >
           Get early access
         </button>

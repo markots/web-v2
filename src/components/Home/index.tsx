@@ -19,45 +19,17 @@ const Home = () => {
       onMouseMove={(e) => onMouseMove(e)}
     >
       <div className="absolute z-0 w-full  hidden lg:block">
-        <img
-          src={images.left_web}
-          alt="background"
-          className="top-0 left-0"
-        />
-        <img
-          src={images.right_web}
-          alt="background"
-          className="absolute top-0 right-0"
-        />
-        <img
-          src={images.right1_web}
-          alt="background"
-          className="absolute top-0 right-0"
-        />
+        <img src="/images/home/left_web.svg" alt="background" className="top-0 left-0" />
+        <img src="/images/home/right_web.svg" alt="background" className="absolute top-0 right-0" />
+        <img src="/images/home/right1_web.svg" alt="background" className="absolute top-0 right-0" />
       </div>
       <div className="absolute z-0 w-full  hidden md:block lg:hidden">
-        <img
-          src={images.left_tablet}
-          alt="background"
-          className="top-0 left-0"
-        />
-        <img
-          src={images.right_tablet}
-          alt="background"
-          className="absolute top-[40vh] right-0"
-        />
+        <img src="/images/home/left_tablet.svg" alt="background" className="top-0 left-0" />
+        <img src="/images/home/right_tablet.svg" alt="background" className="absolute top-[40vh] right-0" />
       </div>
       <div className="absolute z-0 w-full  block md:hidden">
-        <img
-          src={images.left_mobile}
-          alt="background"
-          className="top-0 left-0"
-        />
-        <img
-          src={images.right_mobile}
-          alt="background"
-          className="absolute top-[20vh] right-0"
-        />
+        <img src="/images/home/left_mobile.svg" alt="background" className="top-0 left-0" />
+        <img src="/images/home/right_mobile.svg" alt="background" className="absolute top-[20vh] right-0" />
       </div>
       <div className="pt-24 lg:pt-32 pb-8 lg:pb-32 relative z-10">
         <div className="flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-8 lg:gap-32 items-center justify-center px-4">
@@ -66,28 +38,28 @@ const Home = () => {
               <span className="text-[#00EEFD]">The Web3 ”everything” app</span>
               <br />you have been waiting for
             </span>
-            <span className="text-[24px] lg:text-[32px] font-semibold ">
+            <span className="text-[24px] lg:text-[32px] font-medium ">
               By “everything”, we mean social, payments, community space, discover your favorite content & digital items – all in one place.
             </span>
             <div className="self-start md:self-auto lg:self-start">
               <div className="p-4 lg:p-6 flex flex-col lg:flex-row gap-4 lg:gap-0 text-xl font-semibold border border-1 border-[#666] rounded-xl bg-[#00000033]">
                 Coming soon on &nbsp;
                 <div className="flex">
-                  <img src={images.androidLogo} className="w-6" alt="logo" />
+                  <img src="/images/home/android_logo.svg" className="w-6" alt="logo" />
                   &nbsp;Android and&nbsp;
-                  <img src={images.appleLogo} className="w-6" alt="logo" />
+                  <img src="/images/home/ios_logo.svg" className="w-6" alt="logo" />
                   &nbsp;iOS
                 </div>
               </div>
             </div>
             <div className="flex gap-6">
               <button
-                className="px-2 md:px-4 lg:px-6 h-12 text-[18px] text-black font-semibold bg-white rounded-full whitespace-nowrap"
+                className="px-2 md:px-4 lg:px-8 h-12 text-[18px] text-black font-semibold bg-white hover:bg-[#CCCCCC] active:bg-[#AAAAAA] rounded-full whitespace-nowrap"
               >
                 Get early access
               </button>
               <button
-                className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold border-2 border-white rounded-full whitespace-nowrap"
+                className="px-2 md:px-4 lg:px-6 h-12 flex items-center text-[18px] text-white font-semibold  hover:bg-[#FFFFFF33] active:bg-[#FFFFFF66] border-2 border-white rounded-full whitespace-nowrap"
               >
                 Follow us on
                 <BsTwitter
@@ -104,14 +76,14 @@ const Home = () => {
           </div>
           <div className="flex items-center justify-center min-w-[300px] relative">
             <img
-              src={images.glass} alt="glass"
+              src="/images/home/glass.svg" alt="glass"
               className="absolute -right-2 -top-2 ease-in"
               style={{
                 left: offset.left,
                 top: offset.top
               }}
             />
-            <img src={images.feed} alt="feed" className="z-10" />
+            <img src="/images/home/feed.svg" alt="feed" className="z-10" />
           </div>
         </div>
       </div>
