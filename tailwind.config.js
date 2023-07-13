@@ -7,6 +7,12 @@ module.exports = {
     extend: {},
     fontFamily: {
       Outfit:['Outfit', 'sans-serif']
+    },
+    backgroundImage:{
+      'vision-bg-mobile': "url('../public/images/vision_bg_mobile.svg')",
+      'vision-bg': "url('../public/images/vision_bgimg.svg')",
+       'vision-bg-tablet': "url('../public/images/vision_bg_tablet.svg')",
+      
     }
   },
   plugins: [],
