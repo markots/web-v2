@@ -76,9 +76,8 @@ function EarlyAccess() {
                     null
                   }
                 </div>
-                <button className="rounded-full bg-[#9264F8] hover:bg-[#B882FF] focus:bg-[#6646AE] focus:border-red focus:border pressed:bg-[#6646AE] text-[18px] font-Outfit text-white py-2 px-6 h-12" 
+                <button className="rounded-full bg-[#9264F8] hover:bg-[#B882FF] active:bg-[#6646AE] active:border-[#6646AE] text-[18px] font-Outfit text-white py-2 px-6 h-12 focus:border-white-600 focus-visible:border-white-600" 
                   onClick={checkEmail}
-                  disabled={isLoading}
                 >
                   Sign up for early access
                 </button>
