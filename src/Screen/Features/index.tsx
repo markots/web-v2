@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { images } from '../../constants/images';
 import CustomText from '../../component/Features/CustomText';
-import Feed2 from '../../component/Features/Feed2';
+import Feed2 from '../../component/Features/desktop/Feed2';
 import FeedMain from '../../component/Features/Feedmain';
 import SvgMobiFeed from '../../component/Features/mobile/MFeedMain';
 import AnimateScroll from '../../component/Features/animation';

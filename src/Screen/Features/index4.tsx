@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
-import DMfeedSvg from "../../component/Features/DmFeed";
+import DMfeedSvg from "../../component/Features/desktop/DmFeed";
 import SVGFeeed4 from "../../component/Features/mobile/Mfeed4";
 import AnimateScroll from '../../component/Features/animation';
 

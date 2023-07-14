@@ -1,7 +1,7 @@
 
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
-import Feed2 from '../../component/Features/Feed2'
+import Feed2 from '../../component/Features/desktop/Feed2'
 import SlideText from '../../component/Features/animation'
 import React, { useState, useEffect } from 'react';
 import AnimateOnScroll from '../../component/Features/animation'

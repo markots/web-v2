@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
-import ProfileFeed from '../../component/Features/Peofile'
+import ProfileFeed from '../../component/Features/desktop/Peofile'
 import AnimateOnScroll from '../../component/Features/animation'
 import SVGProfile from '../../component/Features/mobile/MProfile';
 import AnimateScroll from '../../component/Features/animation';

@@ -5,9 +5,11 @@ import Svgtext1 from "../../component/Features/text";
 import Svgtext2 from "../../component/Features/text2";
 import MarqueeText from "../../Function/marquee";
 import MarqueeText2 from "../../Function/marque2";
-import SvgFeature6 from "../../component/Features/Feature6";
+import SvgFeature6 from "../../component/Features/desktop/Feature6";
 import AnimateText from "../../component/Features/animateText";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import Svg7Component from "../../component/Features/desktop/feature7";
+import SvgM6Component from "../../component/Features/mobile/Mfeed6";
 
 function FeedSlider7() {
 
@@ -51,10 +53,9 @@ function FeedSlider7() {
       <AnimationOnScroll duration={2} animateIn="animate__fadeInRightBig" animateOut="animate__fadeInLeftBig">
 
                 <div className="z-10 flex flex-col items-center mb-20 -mt-40 ">
-                    {isMobileView ? <img
-                    src= {images.feature6}/> : <img
-                    src={images.mfeature6} />}
-                </div>
+                    {isMobileView ?<SvgM6Component/>: <SvgFeature6/>
+                    }
+                </div> 
 
                 <div className="items-center p-4 max-w-2xl text-center text-base sm:text-xl md:text-2xl lg:text-2xl font-Outfit font-normal leading-24 sm:leading-30 md:leading-34 text-white ">
                     <p className="">
