@@ -59,19 +59,19 @@ function EarlyAccess() {
           <img className='w-full absolute lg:mt-[-220px] md:mt-[-170px]' src="/images/line.svg" alt="line_image"/>
           <img className='w-full' src="/images/bottom.svg" alt="bottom_image"/>
           <div className="absolute inset-0 flex items-center justify-center w-full bottom-[70%]">
-            <div className="bg-gray-500 bg-opacity-40 backdrop-blur-2xl py-24 border border-white w-8/12 rounded-md">
+            <div className="bg-gray-500 bg-opacity-40 backdrop-blur-2xl py-20 border border-white w-8/12 rounded-md">
               <p className="text-[32px] text-center text-white font-Outfit font-bold">Be among the first to try out Townesquare</p>
               <p className="text-[18px] text-center text-white font-Outfit pt-4">We’ll send you an invite to try out TowneSquare as soon as we’re ready.<br/>No spam, no junk mail or other mumbo-jumbo, pinky promise!</p>
               <div>
-              <div className='flex space-x-6 justify-center pt-16'>
-                <div className='w-6/12'>
+              <div className='flex space-x-6 justify-center pt-14'>
+                <div className='w-6/12 h-24'>
                   <input value={email} className="placeholder-shown:border-gray-500 border-[#CCCCCC] border rounded-full bg-black px-5 w-full text-white text-[16px] py-1 h-12" placeholder='Your email' onChange={handleEmailChange} />
                   {
                     error ?
-                      <p className='text-[#FF6069] font-Outfit text-lg pt-4'>{error}</p>
+                      <p className='text-[#FF6069] font-Outfit text-lg pt-3'>{error}</p>
                     :
                     isComplete ?
-                      <p className='text-[#32D583] font-Outfit text-lg pt-4'>Thanks for signing up, we won't let you down!</p>
+                      <p className='text-[#32D583] font-Outfit text-lg pt-3'>Thanks for signing up, we won't let you down!</p>
                     :
                     null
                   }
