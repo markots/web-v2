@@ -6,15 +6,18 @@ import Features from './components/Features';
 import EarlyAccess from './components/EarlyAccess';
 import { Footer } from './components/Footer';
 
+//<Vision/>
+//<div className="pageShown">
+//<Header/>
+//<Home/>
+//</div>
+//<EarlyAccess/>
+//<Footer/>
+//94,64,158
 function App() {
   return (
-    <div>
-      <Header/>
-      <Home/>
-      <Vision/>
+    <div className="bg">
       <Features/>
-      <EarlyAccess/>
-      <Footer/>
     </div>
   );
 }
