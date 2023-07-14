@@ -1,18 +1,10 @@
 
 import { images } from '../../constants/images'
 import CustomText from '../../component/Features/CustomText'
-import Feed2 from '../../component/Features/desktop/Feed2'
 import { useState, useEffect } from 'react';
-import SvgMFeed2 from '../../component/Features/mobile/MFeed2';
 import AnimateScroll from '../../component/Features/animation';
-import SVGProfile from '../../component/Features/mobile/MProfile';
-import ProfileFeed from '../../component/Features/desktop/Peofile';
-import SVGFeeed4 from '../../component/Features/mobile/Mfeed4';
-import DMfeedSvg from '../../component/Features/desktop/DmFeed';
-import SvgMobiFeed from '../../component/Features/mobile/MFeedMain';
-import FeedMain from '../../component/Features/Feedmain';
 
-function FeedSlider2() {
+function Featureindex() {
   const [isMobileView, setIsMobileView] = useState<boolean>(false);
 
   useEffect(() => {
@@ -52,7 +44,13 @@ function FeedSlider2() {
 <AnimateScroll> 
       <div className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center">
         <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-          {isMobileView ? <SvgMobiFeed /> : <FeedMain />}
+        {isMobileView ? (
+    <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
+      <img className="w-full" src="/images/m_features1.svg" alt="experence_freedom" />
+    </div>
+  ) : (
+    <img className="w-full" src="/images/features1.svg" alt="experence_freedom" />
+  )}
         </div>
 
         <CustomText
@@ -68,7 +66,13 @@ function FeedSlider2() {
 
 <div className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center"> 
       <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-        {isMobileView ? <SvgMFeed2 /> : <Feed2 />}
+      {isMobileView ? (
+    <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
+      <img className="w-full" src="/images/m_features2.svg" alt="experence_freedom" />
+    </div>
+  ) : (
+    <img className="w-full" src="/images/features2.svg" alt="experence_freedom" />
+  )}
       </div>
 
 
@@ -89,7 +93,13 @@ function FeedSlider2() {
        <AnimateScroll>  
     <div className="flex flex-col md:flex-row gap-20 flex-grow-1 justify-center bg-black relative w-full items-center"> 
           <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-          {isMobileView ? <SVGProfile/> : <ProfileFeed/>}
+          {isMobileView ? (
+    <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
+      <img className="w-full" src="/images/m_features3.svg" alt="experence_freedom" />
+    </div>
+  ) : (
+    <img className="w-full" src="/images/features3.svg" alt="experence_freedom" />
+  )}
           </div>
 
 
@@ -108,7 +118,13 @@ function FeedSlider2() {
 
 
           <div className="flex flex-col justify-center items-center md:items-start mb-151 mt-24 mb-20">
-            {isMobileView ? <SVGFeeed4 /> : <DMfeedSvg />}
+          {isMobileView ? (
+    <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
+      <img className="w-full" src="/images/m_features4.svg" alt="experence_freedom" />
+    </div>
+  ) : (
+    <img className="w-full" src="/images/features4.svg" alt="experence_freedom" />
+  )}
           </div>
 
           <CustomText
@@ -127,4 +143,4 @@ function FeedSlider2() {
   
   )
 }
-export default FeedSlider2
+export default Featureindex;
