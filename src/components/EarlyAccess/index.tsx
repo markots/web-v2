@@ -76,26 +76,12 @@ function EarlyAccess() {
                     null
                   }
                 </div>
-                <button className="rounded-full bg-[#9264F8] text-[18px] font-Outfit text-white py-2 px-6 h-12" 
+                <button className="rounded-full bg-[#9264F8] hover:bg-[#B882FF] active:bg-[#6646AE] active:border-[#6646AE] text-[18px] font-Outfit text-white py-2 px-6 h-12 focus:border-white-600 focus-visible:border-white-600" 
                   onClick={checkEmail}
-                  disabled={isLoading}
                 >
-                  
-                  {isLoading ? (
-                    <svg className="animate-spin h-5 w-5 mr-2" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0012 20c4.411 0 8-3.589 8-8h-4a4 4 0 01-4 4v4zm0-14a7.963 7.963 0 00-3.291.709L8 3l.582 2.291A7.963 7.963 0 0012 4zm7.707.707A7.963 7.963 0 0020 12h4c0-6.627-5.373-12-12-12v4a8 8 0 017.707 4.707zM3.292 8.582L1 8l2.292-.582A7.963 7.963 0 004 12H0c0-4.411 3.589-8 8-8v4a4 4 0 01-4 4zm18.709 3.708L23 16l-2.292.582A7.963 7.963 0 0020 12h4c0 4.411-3.589 8-8 8v-4a4 4 0 014-4z"
-                      />
-                    </svg>
-                  ) : (
-                    'Signup for early access'
-                  )}
+                  Sign up for early access
                 </button>
               </div>
-              
               </div>
             </div>
           </div>
