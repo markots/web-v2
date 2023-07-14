@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Vision from './components/Vision';
 import Features from './components/Features';
 import EarlyAccess from './components/EarlyAccess';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 
 function App() {
   return (

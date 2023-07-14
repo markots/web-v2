@@ -3,7 +3,6 @@ import { BsTwitter, BsGithub } from "react-icons/bs";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-
 export const Footer = (props: any) => {
   return (
     <footer className="w-full pt-8 md:h-[279px] bg-[#1D1431] flex flex-col justify-between pb-4">
