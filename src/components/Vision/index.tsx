@@ -45,9 +45,13 @@ function Vision() {
   return (
     <div className="bg-fixed bg-black bg-right-bottom bg-no-repeat bg-cover bg-vision-bg-mobile md:bg-vision-bg-tablet lg:bg-vision-bg">
       
-      <div className='h-[300vh]'>
-        <div className='sticky sticky_1 overflow-hidden top-0 h-[100vh]'>
-          <div className='absolute h-[100%] w-[300vw] scroll_section_1 will-change-transform flex'>
+     
+      <div className='h-[500vh]'>
+        <div className="sticky sticky_2 overflow-hidden top-0 h-[100vh]">
+          <div className='absolute top-0 scroll_section h-[100%] w-[500vw] will-change-transform flex'>
+             <div className='h-[500vh]'>
+        <div className='sticky sticky_1 overflow-hidden w-screen top-0 h-[100vh]'>
+          <div className='absolute h-[100%] w-[500vw] scroll_section_1 will-change-transform flex'>
               <div  className="w-screen text-white bg-black lg:bg-transparent font-Outfit">
                 <div className="relative flex items-center justify-center h-full">
                   <p  className="absolute font-bold opacity-25 left-20 whitespace-nowrap">~ manage personal data</p>
@@ -67,9 +71,6 @@ function Vision() {
           </div>
         </div>
       </div>
-      <div className='h-[400vh]'>
-        <div className="sticky sticky_2 overflow-hidden top-0 h-[100vh]">
-          <div className='absolute top-0 scroll_section h-[100%] w-[400vw] will-change-transform flex'>
               <div className="flex items-center justify-center w-screen"> 
                 <div> 
                   <p className="text-2xl text-center text-white">Envision a future where everyone has</p>
