@@ -402,10 +402,11 @@ var layerData = [
 ];
 
 function wheel(event) {
+    console.log('asdf');
     event.preventDefault();
     isNext = event.wheelDeltaY < 0;
     if (isNext) {
-        if (pageNum <= 9)
+        if (pageNum < 9)
             pageNum++;
     }
     else {
@@ -415,20 +416,14 @@ function wheel(event) {
     for(var i=0; i<objNames.length; i++)
     {
         if(isNext && layerData[pageNum][objNames[i]] && pageNum >= 1)
-            className = objNames[i] + "_" + (pageNum-1) + "_" + pageNum;
-        else if(!isNext&& (layerData[pageNum+1][objNames[i]]||layerData[pageNum][objNames[i]]) && pageNum <= 9 && pageNum >= 0)//if(!isNext && layerData[pageNum+1][objNames[i]] && pageNum < 9 && pageNum >= 1)
-            className = objNames[i] + "_" + (pageNum+1) + "_" + pageNum;
-        else className = "motionElement";
-        if(objNames[i] == 'bg1' && pageNum<6)
-            className = "bg1";
-        else if(document.getElementById(objNames[i]))
         {
-            if(className == "motionElement")
-                document.getElementById(objNames[i]).className = className;
-            else
-            {
-                document.getElementById(objNames[i]).className = "motionElement " + className;
-            }
+            className = objNames[i] + "_" + (pageNum-1) + "_" + pageNum;
+            console.log(className);
+        }
+        else className = "motionElement";
+        if(document.getElementById(objNames[i]))
+        {
+            document.getElementById(objNames[i]).className = className;
         }   
     }
     /*
