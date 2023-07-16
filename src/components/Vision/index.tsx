@@ -42,11 +42,11 @@ function Vision() {
                           <p className="absolute hidden font-bold opacity-50 top-20 lg:inline-block">~ equal access to financial service</p>
                           <p className="absolute hidden font-bold opacity-25 lg:top-1/4 lg:inline-block">~ seamless networking</p>
                           <p className="absolute  hidden font-bold opacity-25 lg:top-1/4 lg:right-[-13%] lg:inline-block">~ protect personal data</p>
-                          <p  className="absolute hidden font-bold opacity-25 left-20 whitespace-nowrap md:top-32 md:inline-block md:text-2xl  lg:inline-block md:left-[63%] lg:bottom-[10%] lg:left-[17%]">~ manage personal data</p>
-                          <p className="absolute font-bold opacity-50 top-16 lg:left-[-13%] lg:top-1/4 md:top-[25%] md:left-[6%] md:text-2xl  ">~ full control</p>
-                          <p className="absolute font-bold opacity-20 top-32 right-px md:top-[33%] lg:top-[69%] lg:left-[48%] md:text-2xl">= p2p payment</p>
-                          <p  className="absolute font-bold opacity-50 bottom-40 focus-visible:opacity-100 right-4 lg:left-[-27%] md:left-[61%] md:bottom-[31%] md:text-2xl lg:top-[47%]">~ financial freedom</p>
-                          <p className="absolute font-bold opacity-25 -left-1 bottom-20 lg:bottom-[22%] lg:left-[70%] md:bottom-[35%] md:text-2xl">=Identity freedom</p>
+                          <p  className="absolute hidden font-bold opacity-25 left-20 whitespace-nowrap md:top-32 md:inline-block md:text-2xl lg:font-medium  lg:font-mediumlg:inline-block md:left-[63%] lg:bottom-[10%] lg:left-[17%]">~ manage personal data</p>
+                          <p className="absolute font-bold opacity-50 top-16 lg:left-[-13%] lg:top-1/4 md:top-[25%] md:left-[6%] md:text-2xl lg:font-medium  ">~ full control</p>
+                          <p className="absolute font-bold opacity-20 top-32 right-px md:top-[33%] lg:top-[69%] lg:left-[48%] md:text-2xl lg:font-medium">= p2p payment</p>
+                          <p  className="absolute font-bold opacity-50 bottom-40 focus-visible:opacity-100 right-4 lg:left-[-43%] md:left-[61%] md:bottom-[31%] md:text-2xl lg:font-medium lg:top-[47%]">~ financial freedom</p>
+                          <p className="absolute font-bold opacity-25 -left-1 bottom-20 lg:top-[69%] whitespace-nowrap lg:left-[89%] md:bottom-[35%] md:text-2xl lg:font-medium">=Identity freedom</p>
                           <p className="absolute font-bold opacity-20 whitespace-nowrap -right-2 bottom-6 lg:bottom-[20%] md:bottom-[15%] md:left-[32%]  md:text-2xl lg:left-[-1%]">=Open finance</p>
                          
                          

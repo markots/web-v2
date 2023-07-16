@@ -14,7 +14,6 @@ function Features() {
           start: '-200px center',
           end: '200px center',
           scrub: 0.5,
-          markers: true,
         },
       }}
     >
