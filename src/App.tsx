@@ -1,40 +1,22 @@
-
-
-
-import Featureindex from "./Screen/Features/index2";
-import FeedSlider2 from "./Screen/Features/index2";
-import Featureindex2 from "./Screen/Features/index5";
-import FeedSlider6 from "./Screen/Features/index5";
+import React from 'react';
+import Home from './components/Home';
+import Header from './components/Header';
+import Vision from './components/Vision';
+import Features from './components/Features';
+import EarlyAccess from './components/EarlyAccess';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div
-      className="flew-grow-1  bg-black relative w-full">
-        <Featureindex/>
-      <Featureindex2 />
-     
-
+    <div>
+      <Header/>
+      <Home/>
+      <Vision/>
+      <Features/>
+      <EarlyAccess/>
+      <Footer/>
     </div>
   );
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
