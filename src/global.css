@@ -5,4 +5,18 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+.lighten{
+    opacity: 1;
+}
+
+#text_1 {
+    font-kerning: none;
+}
+
+body{
+  font-family: Outfit, Urbanist, Arial, Helvetica, sans-serif;
+  color: white;
+}
