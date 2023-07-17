@@ -168,32 +168,7 @@ function Vision() {
            
             </Tween>
            </Reveal>
-       <Reveal repeat>
-        <Tween from={{
-          opacity:0.25
-        }} to={{
-          opacity:1
-        }}>
-           <div className="flex flex-col items-center justify-center w-screen h-screen px-2 text-white font-Outfit lg:flex-row md:flex-row">
-        <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
-          <img className="w-full" src="/images/identity_freedom.svg" alt='identity_freedom'/>
-        </div>
-        <div>
-          <p className="py-2 font-light">With TowneSquare you get</p>
-          <div className="py-4">
-            <h1 className="text-3xl">Identity freedom</h1>
-            <img src="/images/financial_img.png" alt="financial_image"/>
-          </div>
-          <p className="font-light leading-6 lg:text-xl">
-            Embrace the power to shape and <p>cultivate your unique identity and </p> <p> persona.
-            Own your verifable history </p>  <p> records, securely stored on decentralized</p>
-            <p>ledgers, empowering you to define and </p> <p> express
-            yourself authentically.</p>
-          </p>
-        </div>
-        </div>
-        </Tween>
-       </Reveal>
+       
 
         <Reveal>
           <Tween from={{
@@ -221,6 +196,32 @@ function Vision() {
         </div>
           </Tween>
         </Reveal>
+        <Reveal repeat>
+        <Tween from={{
+          opacity:0.25
+        }} to={{
+          opacity:1
+        }}>
+           <div className="flex flex-col items-center justify-center w-screen h-screen px-2 text-white font-Outfit lg:flex-row md:flex-row">
+        <div className="md:mx-8 lg:mx-8 lg:w-1/3 md:w-1/2">
+          <img className="w-full" src="/images/identity_freedom.svg" alt='identity_freedom'/>
+        </div>
+        <div>
+          <p className="py-2 font-light">With TowneSquare you get</p>
+          <div className="py-4">
+            <h1 className="text-3xl">Identity freedom</h1>
+            <img src="/images/financial_img.png" alt="financial_image"/>
+          </div>
+          <p className="font-light leading-6 lg:text-xl">
+            Embrace the power to shape and <p>cultivate your unique identity and </p> <p> persona.
+            Own your verifable history </p>  <p> records, securely stored on decentralized</p>
+            <p>ledgers, empowering you to define and </p> <p> express
+            yourself authentically.</p>
+          </p>
+        </div>
+        </div>
+        </Tween>
+       </Reveal>
           </div>
         </div>
       </div>
