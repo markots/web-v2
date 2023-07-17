@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script src="%PUBLIC_URL%/wheel.js"></script>
     <link rel="icon" href="/assets/img/favicon.ico" sizes="any" />
     <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,8 +28,7 @@
     -->
     <title>TowneSquare</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+  <body onmousewheel="wheel(event)">
     <div id="root"></div>
     <!--
       This HTML file is a template.
